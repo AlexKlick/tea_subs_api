@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "Customers", type: :request do
+  binding.pry
   describe "GET /index" do
-    pending "add some examples (or delete) #{__FILE__}"
+    it 'does' do
+    end
   end
 end
