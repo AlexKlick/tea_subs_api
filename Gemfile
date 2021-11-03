@@ -30,6 +30,9 @@ gem 'rack-cors'
 gem 'figaro'
 gem 'faker'
 gem 'factory_bot_rails'
+gem 'faraday'
+gem 'jsonapi-serializer'
+
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
@@ -37,6 +40,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'vcr'
   gem 'simplecov'
+  gem 'webmock'
 end
 
 group :development do
