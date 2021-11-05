@@ -166,3 +166,5 @@ POST http://localhost:3000/api/v1/customers/1/tea_subscriptions?frequency=monthl
   
 ```
 ## Acknowledgements
+
+To complete this project, I used the ![Tea API](tea-api-vic-lo.herokuapp.com/#), created by Victoria Lo!
