@@ -1,4 +1,7 @@
 class TeaSubscription < ApplicationRecord
   belongs_to :customer
-  belongs_to :tea
+  validates :title, presence: true
+  validates :price, numericality: { greater_than: 0 }
+  validates :status, presence: true
+  validates :frequency, presence: true
 end

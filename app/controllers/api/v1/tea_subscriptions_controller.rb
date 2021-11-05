@@ -10,12 +10,28 @@ class Api::V1::TeaSubscriptionsController < ApplicationController
         message: "Customer currently has no subscriptions",
       }, status: 404
     end
-    render json: 
+    #render json: 
   end
 
   def create
-
-    binding.pry
+    customer = Customer.find_by(id: subscription_params[:customer_id])
+    if customer 
+      teas = TeaFacade.get_teas
+      tea_selection = teas.sample
+      new_sub = customer.tea_subscriptions.new(
+        frequency: subscription_params[:frequency], 
+        price: subscription_params[:price],
+        status: 'active',
+        title: "#{tea_selection.title}every#{subscription_params[:frequency]}",
+        id: tea_selection.id)
+      if new_sub.save
+        render status: 201
+      end
+    else
+      render json: {
+        message: "Customer does not exist!",
+      }, status: 404
+    end
   end
 
   def update
@@ -25,6 +41,6 @@ class Api::V1::TeaSubscriptionsController < ApplicationController
   private
 
   def subscription_params
-    params.require(:tea_subscriptions).permit(:customer_id, :title, :frequency, :tea)
+    params.permit(:customer_id, :price, :frequency, :tea)
   end
 end
