@@ -1,5 +1,5 @@
 
-
+# Tea Subscription API
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -21,6 +21,7 @@
     <li><a href="#json">JSON Format</a></li>
   </ol>
 </details>
+
 ## About The Project
 Tea Subscriptions API is a practice take home exam, done over a 4 day period with approximately 6 hours of work put into it. It is a subscription service where a customer can see their subscriptions, add subscriptions and delete old subscriptions for a tea shipment service. 
 
