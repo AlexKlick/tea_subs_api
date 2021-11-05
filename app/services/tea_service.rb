@@ -12,8 +12,6 @@ class TeaService
 
   def self.get_teas
     response = conn.get('/tea')
-    teas = JSON.parse(response.body,symbolize_names: true)
-    binding.pry
-    Tea.new(teas[0])
+    JSON.parse(response.body,symbolize_names: true)
   end
 end

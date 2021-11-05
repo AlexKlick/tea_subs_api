@@ -4,7 +4,7 @@ class TeaFacade
     tea_arr = teas.map do |tea|
       TeaImport.new(tea)
     end
-    binding.pry
+    tea_arr
   end
   def self.tea_search(keyword)
     
