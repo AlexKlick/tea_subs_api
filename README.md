@@ -141,6 +141,8 @@ POST http://localhost:3000/api/v1/customers/1/tea_subscriptions?frequency=monthl
 ### Cancel Subscription
 ```
   Status: 202 Accepted
+  
+  this updates the GET request to:
   {
     "data": [
         {
