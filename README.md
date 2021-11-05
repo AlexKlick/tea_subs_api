@@ -24,7 +24,7 @@
 </details>
 
 ## About The Project
-Tea Subscriptions API is a practice take home exam, done over a 4 day period with approximately 6 hours of work put into it. It is a subscription service where a customer can see their subscriptions, add subscriptions and delete old subscriptions for a tea shipment service. It uses the ![Tea-API](https://tea-api-vic-lo.herokuapp.com/) for gathering data on tea that is available for purchasing subscriptions. The goal with this aspect was to simulate a vendor which sources their tea from a wholesale supplier with a changing rotation of tea. 
+Tea Subscriptions API is a practice take home exam, done over a 4 day period with approximately 6 hours of work put into it. It is a subscription service where a customer can see their subscriptions, add subscriptions and delete old subscriptions for a tea shipment service. It uses the [Tea-API](https://tea-api-vic-lo.herokuapp.com/) for gathering data on tea that is available for purchasing subscriptions. The goal with this aspect was to simulate a vendor which sources their tea from a wholesale supplier with a changing rotation of tea. 
 
 ### Built With
 
@@ -167,4 +167,4 @@ POST http://localhost:3000/api/v1/customers/1/tea_subscriptions?frequency=monthl
 ```
 ## Acknowledgements
 
-To complete this project, I used the ![Tea API](tea-api-vic-lo.herokuapp.com/#), created by Victoria Lo!
+To complete this project, I used the [Tea API](tea-api-vic-lo.herokuapp.com/#), created by Victoria Lo!
