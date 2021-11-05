@@ -18,7 +18,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#queries">Queries</a></li>
-    <li><a href="#json">JSON Output</a></li>
+    <li><a href="#json-output">JSON Output</a></li>
   </ol>
 </details>
 
