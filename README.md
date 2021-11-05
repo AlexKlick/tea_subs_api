@@ -80,6 +80,14 @@ In order to run this application locally, you will need:
    rails db:create
    rails db:migrate
    ```
+5. Running Locally
+   ```
+    rails s 
+   ```
+6. Running Tests
+   ```
+    bundle exec rspec
+   ```
 ### Queries
 
 | HTTP Verb   | Endpoint                                      | Type                     | Description                                       | JSON Format         |
