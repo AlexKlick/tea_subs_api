@@ -56,6 +56,8 @@ Tea Subscriptions API is a practice take home exam, done over a 4 day period wit
 [tdd-badge]: https://img.shields.io/badge/TDD-345d3c.svg?&style=plastic&logo=TDD&logoColor=white
 [rest-badge]: https://img.shields.io/badge/REST-345d3c.svg?&style=plastic&logo=REST&logoColor=white
 
+## Getting Started
+
 ### Prerequisites
 In order to run this application locally, you will need:
 * rails 5.2.6
