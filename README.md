@@ -98,6 +98,7 @@ In order to run this application locally, you will need:
 | GET         | /customers/:customer_id/tea_subscriptions     | tea_subscriptions index  | return all tea subscriptions for a given customer | [Link](#tea_index)  |
 | POST        | /customers/:customer_id/tea_subscriptions     | tea_subscriptions create | create a new subscription for a customer          | [Link](#create_sub) |
 | PUT / PATCH | /customers/:customer_id/tea_subscriptions/:id | tea_subscriptions update | cancel a tea subscription for a customer          | [Link](#cancel_sub) |                   
+
 ## JSON Output
 ```
   
