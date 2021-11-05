@@ -18,7 +18,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#queries">Queries</a></li>
-    <li><a href="#json">JSON Format</a></li>
+    <li><a href="#json">JSON Output</a></li>
   </ol>
 </details>
 
@@ -64,7 +64,7 @@ In order to run this application locally, you will need:
 * ruby 2.7.2
 * [PostgreSQL](https://www.postgresql.org/docs/9.5/functions-aggregate.html)
 
-### Installation
+## Usage
 
 1. Clone the repo
    ```
@@ -91,14 +91,14 @@ In order to run this application locally, you will need:
    ```
     bundle exec rspec
    ```
-### Queries
+## Queries
 
-| HTTP Verb   | Endpoint                                      | Type                     | Description                                       | JSON Format         |
+| HTTP Verb   | Endpoint                                      | Type                     | Description                                       | JSON Output         |
 |-------------|-----------------------------------------------|--------------------------|---------------------------------------------------|---------------------|
 | GET         | /customers/:customer_id/tea_subscriptions     | tea_subscriptions index  | return all tea subscriptions for a given customer | [Link](#tea_index)  |
 | POST        | /customers/:customer_id/tea_subscriptions     | tea_subscriptions create | create a new subscription for a customer          | [Link](#create_sub) |
 | PUT / PATCH | /customers/:customer_id/tea_subscriptions/:id | tea_subscriptions update | cancel a tea subscription for a customer          | [Link](#cancel_sub) |                   
-### JSON 
+## JSON Output
 ```
   
 ```
