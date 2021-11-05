@@ -11,9 +11,12 @@ RSpec.describe "TeaSubscriptions", type: :request do
     it 'creates a new subscription' do
       customer = FactoryBot.create(:customer)
       customer_subs = Customer.first.tea_subscriptions
-      expect(customer_subs.first.length).to eq(0)
-      post "/api/v1/customers/1/tea_subscriptions?frequency=monthly&price=10.99"
-      expect(customer_subs.first.length).to eq(1)
+      expect(customer_subs.length).to eq(0)
+      post "/api/v1/customers/#{customer.id}/tea_subscriptions?frequency=monthly&price=10.99"
+      expect(response).to have_http_status(:created)
+      
+      customer_subs = Customer.first.tea_subscriptions
+      expect(customer_subs.length).to eq(1)
       expect(customer_subs.first.frequency).to eq("monthly")
       expect(customer_subs.first.price).to eq(10.99)
     end
