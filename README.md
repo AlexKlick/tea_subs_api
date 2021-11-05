@@ -84,11 +84,15 @@ In order to run this application locally, you will need:
    rails db:create
    rails db:migrate
    ```
-5. Running Locally
+5. Seed Database to have some users
+   ```
+    rails db:seed
+   ```
+6. Running Locally
    ```
     rails s 
    ```
-6. Running Tests
+7. Running Tests
    ```
     bundle exec rspec
    ```
@@ -96,13 +100,69 @@ In order to run this application locally, you will need:
 
 | HTTP Verb   | Endpoint                                      | Type                     | Description                                       | JSON Output         |
 |-------------|-----------------------------------------------|--------------------------|---------------------------------------------------|---------------------|
-| GET         | /api/v1/customers/:customer_id/tea_subscriptions     | tea_subscriptions index  | return all tea subscriptions for a given customer | [Link](#tea_index)  |
-| POST        | /api/v1/customers/:customer_id/tea_subscriptions     | tea_subscriptions create | create a new subscription for a customer          | [Link](#create_sub) |
-| PUT / PATCH | /api/v1/customers/:customer_id/tea_subscriptions/:id | tea_subscriptions update | cancel a tea subscription for a customer          | [Link](#cancel_sub) |                   
+| GET         | /api/v1/customers/:customer_id/tea_subscriptions     | tea_subscriptions index  | return all tea subscriptions for a given customer | [Link](#tea_subscriptions_index)  |
+| POST        | /api/v1/customers/:customer_id/tea_subscriptions     | tea_subscriptions create | create a new subscription for a customer          | [Link](#create_subscription) |
+| PUT / PATCH | /api/v1/customers/:customer_id/tea_subscriptions/:id | tea_subscriptions update | cancel a tea subscription for a customer          | [Link](#cancel_subscription) |                   
 
 ## JSON Output
+### Tea Subscriptions Index
 ```
+GET http://localhost:3000/api/v1/customers/1/tea_subscriptions
+
+{
+    "data": [
+        {
+            "id": "5",
+            "type": "TeaSubscription",
+            "attributes": {
+                "title": "chamomileeverymonthly",
+                "price": 10.99,
+                "status": "active",
+                "frequency": "monthly"
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "1",
+                        "type": "Customer"
+                    }
+                }
+            }
+        }
+    ]
+}
+```
+### Create Subscription
+```
+POST http://localhost:3000/api/v1/customers/1/tea_subscriptions?frequency=monthly&price=10.99
+
+  Status: 201 Created
+```
+### Cancel Subscription
+```
+  Status: 202 Accepted
+  {
+    "data": [
+        {
+            "id": "5",
+            "type": "TeaSubscription",
+            "attributes": {
+                "title": "chamomileeverymonthly",
+                "price": 10.99,
+                "status": "deactivated",
+                "frequency": "monthly"
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "1",
+                        "type": "Customer"
+                    }
+                }
+            }
+        }
+    ]
+}
   
 ```
-
 ## Acknowledgements
